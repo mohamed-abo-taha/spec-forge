@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spec-forge"
+version = "0.1.0"
+description = "AI-assisted SDLC toolkit: turn a codebase + a business request into traceable, validated engineering artefacts."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Mohamed Hassan Abo Taha", email = "mohamedhassan15and17@gmail.com" }]
+keywords = ["ai-sdlc", "llm", "specifications", "requirements", "validation", "traceability", "codegen"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Code Generators",
+]
+dependencies = []  # the core runs on the standard library alone
+
+[project.optional-dependencies]
+# Nothing required for local models — the Ollama backend uses urllib.
+dev = []
+
+[project.urls]
+Homepage = "https://github.com/mohamed-abo-taha/spec-forge"
+
+[project.scripts]
+specforge = "specforge.cli:main"
+
+[tool.setuptools]
+packages = ["specforge"]
