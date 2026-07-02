@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 360" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="980" height="360" rx="12" fill="#0f172a"/>
+  <text x="490" y="38" text-anchor="middle" fill="#e2e8f0" font-size="20" font-weight="600">End-to-end traceability</text>
+
+  <!-- spec -->
+  <rect x="40" y="70" width="220" height="70" rx="10" fill="#132a4a" stroke="#2563eb"/>
+  <text x="150" y="97" text-anchor="middle" fill="#93c5fd" font-size="14" font-weight="700">SPEC-001</text>
+  <text x="150" y="118" text-anchor="middle" fill="#94a3b8" font-size="12">Specification + business rules</text>
+
+  <!-- story -->
+  <rect x="330" y="70" width="220" height="70" rx="10" fill="#132a4a" stroke="#2563eb"/>
+  <text x="440" y="97" text-anchor="middle" fill="#93c5fd" font-size="14" font-weight="700">US-001 · US-002</text>
+  <text x="440" y="118" text-anchor="middle" fill="#94a3b8" font-size="12">As a &lt;role&gt;, I want … so that …</text>
+
+  <!-- criteria -->
+  <rect x="620" y="70" width="220" height="70" rx="10" fill="#132a4a" stroke="#2563eb"/>
+  <text x="730" y="97" text-anchor="middle" fill="#93c5fd" font-size="14" font-weight="700">AC-001 … AC-004</text>
+  <text x="730" y="118" text-anchor="middle" fill="#94a3b8" font-size="12">Given / When / Then</text>
+
+  <!-- tests -->
+  <rect x="620" y="200" width="220" height="70" rx="10" fill="#14321f" stroke="#16a34a"/>
+  <text x="730" y="227" text-anchor="middle" fill="#86efac" font-size="14" font-weight="700">TS-001 … TS-004</text>
+  <text x="730" y="248" text-anchor="middle" fill="#94a3b8" font-size="12">Test scenarios: steps + expected</text>
+
+  <!-- code -->
+  <rect x="40" y="200" width="220" height="90" rx="10" fill="#2a1a3f" stroke="#8b5cf6"/>
+  <text x="150" y="227" text-anchor="middle" fill="#c4b5fd" font-size="14" font-weight="700">Source code (real symbols)</text>
+  <text x="150" y="249" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Consolas, monospace">calculate_charges · apply_discount</text>
+  <text x="150" y="267" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Consolas, monospace">GET/POST /billing/invoices</text>
+
+  <!-- validator -->
+  <rect x="330" y="200" width="220" height="90" rx="10" fill="#3f1d1d" stroke="#ef4444"/>
+  <text x="440" y="227" text-anchor="middle" fill="#fca5a5" font-size="14" font-weight="700">Validator</text>
+  <text x="440" y="248" text-anchor="middle" fill="#94a3b8" font-size="11">rejects broken links, missing levels,</text>
+  <text x="440" y="265" text-anchor="middle" fill="#94a3b8" font-size="11">security gaps, hallucinated symbols</text>
+
+  <!-- arrows: chain -->
+  <line x1="260" y1="105" x2="322" y2="105" stroke="#64748b" stroke-width="1.6" marker-end="url(#arr2)"/>
+  <line x1="550" y1="105" x2="612" y2="105" stroke="#64748b" stroke-width="1.6" marker-end="url(#arr2)"/>
+  <line x1="730" y1="140" x2="730" y2="192" stroke="#64748b" stroke-width="1.6" marker-end="url(#arr2)"/>
+
+  <!-- source refs -->
+  <line x1="150" y1="200" x2="150" y2="148" stroke="#8b5cf6" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arr2)"/>
+  <text x="163" y="178" fill="#c4b5fd" font-size="11">source_refs</text>
+
+  <!-- validator checks -->
+  <line x1="440" y1="200" x2="440" y2="148" stroke="#ef4444" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arr2)"/>
+  <line x1="330" y1="245" x2="268" y2="245" stroke="#ef4444" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arr2)"/>
+  <line x1="550" y1="245" x2="612" y2="245" stroke="#ef4444" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arr2)"/>
+
+  <text x="490" y="330" text-anchor="middle" fill="#64748b" font-size="12">Every artefact carries a stable ID and a link to its parent — any test traces back to the requirement and the code it came from.</text>
+</svg>
