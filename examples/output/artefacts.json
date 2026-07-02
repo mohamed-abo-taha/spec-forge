@@ -1,0 +1,116 @@
+{
+  "request": "Add usage-based invoicing for prepaid customers",
+  "specifications": [
+    {
+      "id": "SPEC-001",
+      "title": "Specification: Add usage-based invoicing for prepaid customers",
+      "summary": "This specification captures the intent \"Add usage-based invoicing for prepaid customers\" against the analyzed codebase (1 file(s): 2 classs, 2 endpoints, 2 functions, 5 methods).",
+      "business_rules": [
+        "The system must preserve the observable behaviour of `get_invoice_endpoint` (endpoint).",
+        "The system must preserve the observable behaviour of `create_invoice_endpoint` (endpoint).",
+        "The system must preserve the observable behaviour of `calculate_charges` (function).",
+        "All API endpoints must enforce authentication, authorization, and input validation before processing a request.",
+        "Every change must be delivered as a thin, independently testable slice with traceability back to this specification."
+      ],
+      "source_refs": [
+        "get_invoice_endpoint",
+        "create_invoice_endpoint",
+        "calculate_charges",
+        "apply_discount",
+        "InvoiceRepository"
+      ]
+    }
+  ],
+  "user_stories": [
+    {
+      "id": "US-001",
+      "spec_id": "SPEC-001",
+      "role": "platform engineer",
+      "want": "the existing business logic captured as a reviewable specification",
+      "benefit": "I can extend the system without regressing current behaviour"
+    },
+    {
+      "id": "US-002",
+      "spec_id": "SPEC-001",
+      "role": "product owner",
+      "want": "each requirement broken into acceptance criteria and tests",
+      "benefit": "delivery stays traceable from intent to implementation"
+    }
+  ],
+  "acceptance_criteria": [
+    {
+      "id": "AC-001",
+      "story_id": "US-001",
+      "given": "a documented specification and the current codebase",
+      "when": "the described capability is implemented as a thin slice",
+      "then": "all existing tests pass and new behaviour is covered by tests"
+    },
+    {
+      "id": "AC-002",
+      "story_id": "US-001",
+      "given": "an API request that fails validation",
+      "when": "the endpoint processes it",
+      "then": "the request is rejected with a clear error and no side effects"
+    },
+    {
+      "id": "AC-003",
+      "story_id": "US-002",
+      "given": "a documented specification and the current codebase",
+      "when": "the described capability is implemented as a thin slice",
+      "then": "all existing tests pass and new behaviour is covered by tests"
+    },
+    {
+      "id": "AC-004",
+      "story_id": "US-002",
+      "given": "an API request that fails validation",
+      "when": "the endpoint processes it",
+      "then": "the request is rejected with a clear error and no side effects"
+    }
+  ],
+  "test_scenarios": [
+    {
+      "id": "TS-001",
+      "criterion_id": "AC-001",
+      "title": "Happy-path behaviour is preserved",
+      "steps": [
+        "Arrange the system in a known-good state",
+        "Exercise the capability described by the criterion",
+        "Assert the observable outcome matches the specification"
+      ],
+      "expected": "The outcome matches the specification and no regression is introduced."
+    },
+    {
+      "id": "TS-002",
+      "criterion_id": "AC-002",
+      "title": "Happy-path behaviour is preserved",
+      "steps": [
+        "Arrange the system in a known-good state",
+        "Exercise the capability described by the criterion",
+        "Assert the observable outcome matches the specification"
+      ],
+      "expected": "The outcome matches the specification and no regression is introduced."
+    },
+    {
+      "id": "TS-003",
+      "criterion_id": "AC-003",
+      "title": "Happy-path behaviour is preserved",
+      "steps": [
+        "Arrange the system in a known-good state",
+        "Exercise the capability described by the criterion",
+        "Assert the observable outcome matches the specification"
+      ],
+      "expected": "The outcome matches the specification and no regression is introduced."
+    },
+    {
+      "id": "TS-004",
+      "criterion_id": "AC-004",
+      "title": "Happy-path behaviour is preserved",
+      "steps": [
+        "Arrange the system in a known-good state",
+        "Exercise the capability described by the criterion",
+        "Assert the observable outcome matches the specification"
+      ],
+      "expected": "The outcome matches the specification and no regression is introduced."
+    }
+  ]
+}
